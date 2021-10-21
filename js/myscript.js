@@ -32,16 +32,14 @@ let element = document.getElementById("ticketPrice");
 
 if(age <= 18) {
     minors = ticket - discount20 ;
-    element.innerHTML = `your ticket is ${minors} &euro;`;  
+    element.innerHTML = `your ticket is ${minors.toFixed(2)} &euro;`;  
 } else if(65 <= age) {
     over65 = ticket - discount40;
-    element.innerHTML =`your ticket is ${over65} &euro;`;   
+    element.innerHTML =`your ticket is ${over65.toFixed(2)} &euro;`;   
 } else {
     regular = ticket;
-    element.innerHTML = `your ticket is ${regular} &euro;`;   
+    element.innerHTML = `your ticket is ${regular.toFixed(2)} &euro;`;   
 }
-
-
 
 console.log(ticket)
 console.log("ticket price for underage", minors);
